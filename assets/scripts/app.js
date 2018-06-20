@@ -235,9 +235,28 @@ $(document).ready(function() {
 			var player1Wins = snapshot.val()[1].wins;
 			var player2Wins = snapshot.val()[2].wins;
 
-			$("#player1option").text(player1option);
-			$("#player2option").text(player2option);
-
+			if (player1option === "Rock"){
+				$("#player1option").html("Rock <i class='fas fa-hand-rock'></i>");
+			}
+	
+			if (player1option === "Scissors") {
+				$("#player1option").html("Scissors <i class='fas fa-hand-scissors'></i>");
+			}
+	
+			if (player1option === "Paper") {
+				$("#player1option").html("Paper <i class='fas fa-hand-paper'></i>");
+			}	
+			if (player2option === "Rock"){
+				$("#player2option").html("Rock <i class='fas fa-hand-rock'></i>");
+			}
+	
+			if (player2option === "Scissors") {
+				$("#player2option").html("Scissors <i class='fas fa-hand-scissors'></i>");
+			}
+	
+			if (player2option === "Paper") {
+				$("#player2option").html("Paper <i class='fas fa-hand-paper'></i>");
+			}	
 			//game logic for determing who wins
 
 			if(player1option === "Rock" && player2option === "Rock") {
