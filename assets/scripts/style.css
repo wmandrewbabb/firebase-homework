@@ -12,6 +12,7 @@ body {
     --keycolor: #5ADBFF;
     --background: #0D1F2D;
     --backgroundpop: #40434E;
+    --marginlines: #654F6F;
     /* overflow: hidden; */
     /* height: 100vh; */
     background-color: var(--background);
@@ -21,13 +22,15 @@ body {
 
   #pageTitle {
     font-family: 'Erica One', cursive;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--backgroundpop);
-    border-bottom: var(--keycolor);
-    border-bottom-width: 2px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white;
+    color: var(--keycolor);
+    border-bottom: var(--marginlines);
+    border-bottom-width: 4px;
     border-bottom-style: solid;
     margin-top: 1rem;
     margin-left: 0px;
+    text-shadow: 2px 2px var(--backgroundpop);
   }
 
   .form-control{
@@ -46,10 +49,18 @@ body {
       padding-top: .340rem!important;
   }
 
+  .btn-success:active {
+      border-width: 0px!important;
+      border-color: white!important;
+  }
+
   #gameRecordRow {
     font-family: 'Baloo Paaji', cursive;
     font-size: 48px!important;
     color: var(--keycolor)!important;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 2px 2px var(--backgroundpop);
   }
   
   .alert-warning {
@@ -61,6 +72,10 @@ body {
       font-size: 24px!important;
   }
     
+  .infoPanel{
+      margin: 0px!important;
+      padding: 0px!important;
+  }
     .game-container {
         /*	display: flex;*/
         }
@@ -94,6 +109,8 @@ body {
     
     #playerGreetingPanel {
         display: none;
+        margin-top: 5px!important;
+        margin-bottom: 0px!important;
     }
     
     #gameMessage {
@@ -127,6 +144,9 @@ body {
         font-weight: bold;
     }
     
+    #nameSubmit {
+        margin-left: 4px!important;
+    }
     .timestamp {
         float: right;
         color: #bbb;
@@ -208,10 +228,110 @@ body {
     }
 
     .uniformHeight {
-        min-height: 4rem;
+        min-height: 75px;
         margin-top: 5px;
     }
 
     #enterText {
         margin-top: 4px;
+    }
+
+    .bounceIn {
+        -webkit-animation-duration: 0.75s;
+        animation-duration: 0.75s;
+        -webkit-animation-name: bounceIn;
+        animation-name: bounceIn;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    
+@-webkit-keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    }
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
     }

@@ -26,7 +26,7 @@ $(document).ready(function() {
 	var playerNum; 
 	var playersConnected;
 	var userKey; 
-	var gameNumber = 1;
+	var gameNumber = 1; //could have done true false for this, thought about displaying the total number of games but ah well
 	var pauseInterval = 2000;
 
 
@@ -36,9 +36,9 @@ $(document).ready(function() {
 
 			$("#player" + pNum + "option").empty();
 
-			var r = $("<div>").text("Rock").attr("dataOption", "Rock").addClass("player" + pNum + "option");
-			var p = $("<div>").text("Paper").attr("dataOption", "Paper").addClass("player" + pNum + "option");
-			var s = $("<div>").text("Scissors").attr("dataOption", "Scissors").addClass("player" + pNum + "option");
+			var r = $("<div>").html("Rock <i class='fas fa-hand-rock'></i>").attr("dataOption", "Rock").addClass("player" + pNum + "option");
+			var p = $("<div>").html("Paper <i class='fas fa-hand-paper'></i>").attr("dataOption", "Paper").addClass("player" + pNum + "option");
+			var s = $("<div>").html("Scissors <i class='fas fa-hand-scissors'></i>").attr("dataOption", "Scissors").addClass("player" + pNum + "option");
 			var rps = $("<div>").append(r, p, s);
 
 			$("#player" + pNum + "option").append(rps);
@@ -183,7 +183,18 @@ $(document).ready(function() {
 			option: player1option
 		});
 
-		$("#player1option").text(player1option);
+		if(player1option === "Rock"){
+			$("#player1option").html("Rock <i class='fas fa-hand-rock'></i>");
+		}
+
+		if(player1option === "Scissors") {
+			$("#player1option").html("Scissors <i class='fas fa-hand-scissors'></i>");
+
+		}
+
+		if (player1option === "Paper") {
+			$("#player1option").html("Paper <i class='fas fa-hand-paper'></i>");
+		}	
 
 	});
 
@@ -194,7 +205,18 @@ $(document).ready(function() {
 			option: player2option
 		});
 
-		$("#player2option").text(player2option);
+		if(player2option === "Rock"){
+			$("#player2option").html("Rock <i class='fas fa-hand-rock'></i>");
+		}
+
+		if(player2option === "Scissors") {
+			$("#player2option").html("Scissors <i class='fas fa-hand-scissors'></i>");
+
+		}
+
+		if (player2option === "Paper") {
+			$("#player2option").html("Paper <i class='fas fa-hand-paper'></i>");
+		}	
 
 	});
 
