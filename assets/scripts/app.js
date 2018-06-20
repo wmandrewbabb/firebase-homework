@@ -27,7 +27,7 @@ $(document).ready(function() {
 	var playersConnected;
 	var userKey; 
 	var gameNumber = 1; //could have done true false for this, thought about displaying the total number of games but ah well
-	var pauseInterval = 2000;
+	var pauseInterval = 3000;
 
 
 	var displayoption = function(pNum) {
@@ -315,6 +315,8 @@ $(document).ready(function() {
 				$("#outcome").text("You tied!");
 			}
 
+			$("#outcome").addClass("bounceIn");
+	
 			gameNumber++;
 			ref.update({
 				gameNumber: gameNumber
@@ -325,6 +327,7 @@ $(document).ready(function() {
 
 			setTimeout(function() {
 				$("#outcome").empty();
+				$("#outcome").removeClass("bounceIn");
 				$("#player1option").empty();
 				$("#player2option").empty();
 				displayoption(1);
